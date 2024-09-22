@@ -1,0 +1,248 @@
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    height: 100%;
+  }
+
+  #navlinks {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #navlinks:hover{
+    background-color: #333;
+  }
+
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  .logo {
+    height: 37px;
+  }
+
+  .language {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .auth-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .login-button,
+  .signup-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup-button {
+    background-color: white;
+    color: black;
+  }
+
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: gray;
+  }
+
+  .login-main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-content {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .login-content h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .user-type {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-option {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .user-option:hover {
+    background-color: #f0f0f0;
+  }
+
+  .driver {
+    background-color: white;
+  }
+
+  .rider {
+    background-color: white;
+  }
+
+  .login-container {
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: row;
+    margin-top:15vh;
+    /* Align items side by side */
+  }
+
+  .login-text {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 2.5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+
+  .login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    /* Maximum width for larger screens */
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* Center the container */
+  }
+
+  .login-link {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    flex: 1;
+    margin: 0 10px;
+    /* Space between the links */
+    position: relative;
+  }
+
+  .login-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-link:hover {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .login-link:hover::after {
+    background-color: #000;
+    /* Darker underline on hover */
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .login-link:hover .arrow {
+    transform: translateX(10px);
+    /* Move the arrow 10px to the right on hover */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .links-container {
+      flex-direction: column;
+      /* Stack links vertically on smaller screens */
+    }
+
+    .login-link {
+      margin: 10px 0;
+      /* Space between links when stacked */
+      width: 100%;
+      /* Full width when stacked */
+    }
+  }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      /* Stack items vertically */
+      text-align: center;
+    }
+
+    .login-text {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-content h1 {
+      font-size: 20px;
+    }
+
+    .user-option {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,6 @@
+/* Approximate the effect of 150% zoom by assuming the viewport width is reduced by 1/1.5 */
+@media (max-width: 800px) { 
+    .zoom-sensitive-image {
+        display: none;
+    }
+}

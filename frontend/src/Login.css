@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: black;
+  padding: 1.5rem 2rem; /* Adjust padding for larger header */
+  text-align: center;
+}
+
+.header h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 2.5rem; /* Larger header text */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Card Styles */
+.card {
+  max-width: 90%;
+  width: 100%;
+}
+
+.card-body {
+  padding: 2rem; /* Increase padding inside the card */
+}
+
+.form-control {
+  font-size: 1.25rem; /* Larger text in input */
+  padding: 0.75rem; /* Increased padding for better interaction */
+}
+
+.btn {
+  font-size: 1.25rem; /* Larger text on buttons */
+  padding: 0.75rem; /* Increased padding for better interaction */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .card {
+    max-width: 400px;
+  }
+
+  .header h1 {
+    font-size: 3rem; /* Adjust for larger screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 1.75rem; /* Smaller header text on small screens */
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+
+  .form-control,
+  .btn {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+    padding: 0.5rem; /* Reduced padding for smaller screens */
+  }
+}

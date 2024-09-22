@@ -1,0 +1,458 @@
+    /* Global Reset and Font Family */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        /* Apply Poppins globally */
+    }
+
+    html {
+        font-size: 16px;
+        /* Base font size */
+    }
+
+    body {
+        overflow-x: hidden;
+        /* Prevent horizontal overflow when zoomed */
+    }
+
+    /* General Container Styles */
+    .homepage-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 5vw;
+        /* Use vw for padding */
+        background-color: #000;
+        color: white;
+        flex-wrap: wrap;
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        /* Allow fixed positioning relative to this */
+    }
+
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        background-color: #000;
+        font-size: 1rem;
+        /* Use rem for font sizes */
+        position: sticky;
+        /* Navbar remains fixed at the top */
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        /* Use rem for consistent scaling */
+        font-weight: bold;
+    }
+
+    .nav-links a,
+    .auth-links a {
+        color: white;
+        margin: 0 1vw;
+        /* Use vw for margins */
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .nav-links:hover {
+        background-color: #333;
+    }
+
+    .auth-links .sign-up {
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    .content {
+        flex: 1;
+        text-align: left;
+        padding-right: 5vw;
+        /* Use vw for padding */
+        max-width: 30rem;
+        /* Set max-width for scaling */
+        position: sticky;
+        /* Keeps the content fixed when scrolling */
+        top: 50px;
+        /* Adjust this as needed */
+
+    }
+
+    /* Input Container with Vertical Line */
+    .input-container {
+        position: relative;
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        border-radius: 5px;
+        flex-direction: column;
+        padding: 2.5%;
+        transform-origin: top left;
+        /* Ensure proper scaling */
+    }
+
+    .input-container .input-with-icon {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 1;
+        margin-right: 10em;
+
+    }
+
+    .input-container .input-with-icon input {
+        flex: 1;
+        padding: 0.625rem 0.625rem 0.625rem 2.188rem;
+        /* Adjust space for icon */
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        font-size: 1rem;
+    }
+
+    .input-container .input-with-icon svg {
+        position: absolute;
+        left: 0.625rem;
+        fill: black;
+        width: 1.25rem;
+        height: 1.25rem;
+        transition: transform 0.3s ease-in-out;
+        /* Smooth scaling */
+    }
+
+    .input-container .location-button {
+        position: absolute;
+        right: 0.625rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .location-button svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: white;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        /* Smooth scaling and disappearance */
+    }
+
+    /* Vertical Line */
+    .input-container .vertical-line {
+        position: absolute;
+        width: 1px;
+        height: 2.5rem;
+        background-color: white;
+        top: 50%;
+        /* Centers the line vertically within the container */
+        right: 74%;
+        /* Adjust this if necessary */
+        transform: translateY(-50%);
+        /* Ensures vertical centering */
+    }
+
+    /* Button Styles */
+    .see-prices-btn {
+        padding: 0.625rem 1.25rem;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 0.625rem;
+    }
+
+    .illustration {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        max-width: 50%;
+        position: sticky;
+        /* Keeps the image fixed when scrolling */
+        top: 50px;
+        /* Adjust this as needed */
+    }
+
+    .illustration img,
+    .illustration svg {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+        /* Smooth scaling */
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        position: relative;
+        /* Ensure it doesn't affect surrounding content */
+        z-index: 1;
+        /* Ensure it stays below the navbar */
+        margin-top: 0;
+        /* Reset margin-top to avoid space above the container */
+        padding-top: 50px;
+        /* Create space for the fixed navbar (adjust based on navbar height) */
+    }
+
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    input:focus {
+        border-bottom-style: solid;
+        border-color: black;
+    }
+
+    label {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        padding: 0 5px;
+        color: #aaa;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        top: -8px;
+        left: 5px;
+        font-size: 12px;
+        color: black;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+
+    button:hover {
+        background-color: gray;
+        border-radius: 30px;
+    }
+
+
+    .hover-link {
+        position: relative;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .hover-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px; /* Adjust this value based on the distance of the line from the link */
+        width: 100%;
+        height: 1px; /* Adjust the thickness of the line */
+        background-color: darkgray; /* Default color of the line */
+        transition: background-color 0.3s ease, width 0.3s ease;
+        width:0px;
+    }
+
+    .hover-link:hover::after {
+        background-color: #000;
+        /* Color of the line */
+        width: 100%;
+        /* Fills the line on hover */
+    }
+
+    .hover-link:hover {
+        color: black;
+        text-decoration: none;
+        /* Optional: Change link color on hover */
+    }
+
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1024px) {
+        html {
+            font-size: 14px;
+            /* Decrease font size on smaller screens */
+        }
+
+        .navbar {
+            font-size: 0.875rem;
+        }
+
+        .input-container {
+            transform: scale(0.9);
+            /* Scale down when zoomed out */
+        }
+
+        .input-container .input-with-icon svg,
+        .location-button svg {
+            transform: scale(0.9);
+            /* Scale down icons */
+        }
+
+        .input-container .vertical-line {
+            height: 2rem;
+        }
+    }
+
+    /* Approximate the effect of 150% zoom by assuming the viewport width is reduced by 1/1.5 */
+    @media (max-width: 800px) {
+        .zoom-sensitive-image {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .homepage-container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 5vw;
+        }
+
+        .content {
+            text-align: center;
+            padding-right: 0;
+            max-width: 100%;
+            margin-bottom: 2rem;
+            transform: scale(0.85);
+            /* Scale down content */
+        }
+
+        .illustration {
+            justify-content: center;
+            max-width: 100%;
+        }
+
+        .input-container {
+            flex-direction: column;
+        }
+
+        .input-container .vertical-line {
+            display: none;
+        }
+
+        .see-prices-btn {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .input-container .input-with-icon svg,
+        .location-button svg {
+            transform: scale(0.85);
+            /* Further scale down icons */
+        }
+
+        .input-container .input-with-icon input {
+            font-size: 0.9rem;
+            /* Adjust font size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        html {
+            font-size: 12px;
+            /* Further decrease font size on very small screens */
+        }
+
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo {
+            margin-bottom: 0.625rem;
+        }
+
+        .nav-links,
+        .auth-links {
+            margin-top: 0.625rem;
+        }
+
+        .input-container {
+            flex-direction: column;
+            width: 100%;
+            transform: scale(0.75);
+            /* Further scale down input container */
+        }
+
+        .input-container input {
+            width: 100%;
+            max-width: none;
+            margin-right: 0;
+            margin-bottom: 0.625rem;
+        }
+
+        .input-container .vertical-line {
+            display: none;
+        }
+
+        .see-prices-btn {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .illustration {
+            max-width: 100%;
+            justify-content: center;
+            transform: scale(0.75);
+            /* Further scale down image */
+        }
+
+        .input-container .input-with-icon svg,
+        .location-button svg {
+            transform: scale(0.75);
+            /* Further scale down icons */
+        }
+    }
+
+    @media (max-width: 320px) {
+
+        .input-container .input-with-icon svg,
+        .location-button svg {
+            opacity: 0;
+            /* Hide SVG icons completely on very small screens */
+        }
+    }

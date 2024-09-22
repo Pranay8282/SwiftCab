@@ -1,0 +1,12 @@
+.timeline-icon {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.timeline-line {
+    width: 2px;
+    background-color: black;
+    flex-grow: 1;
+}

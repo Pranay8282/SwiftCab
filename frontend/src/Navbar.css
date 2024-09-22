@@ -1,0 +1,99 @@
+
+/* Base styles */
+.navbarDiv {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15vw; /* Dynamic padding using viewport width */
+    padding-right: 15vw; /* Dynamic padding using viewport width */
+    background-color: black;
+    position:relative; /* Keep the navbar fixed at the top */
+    width: 100%; /* Full width for the navbar */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Stick to the left of the page */
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    height: 80px; /* Set a fixed height for the navbar (adjust as needed) */
+}
+
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+#hover{
+    transition: background-color 0.5s ease-in-out;
+}
+
+.login-button,
+.signup-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button {
+    background-color: white;
+    color: black;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: gray;
+}
+
+.navbar-toggler {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for the button */
+    padding: 0;
+}
+
+.navbar-toggler img {
+    transition: opacity 0.3s ease; /* Smooth transition for the icon */
+    width: 24px; /* Adjust size if needed */
+    height: 24px; /* Adjust size if needed */
+}
+
+.navbar-toggler.open img {
+    opacity: 0; /* Fade out the hamburger icon */
+}
+
+.navbar-toggler.open img:last-of-type {
+    opacity: 1; /* Fade in the close icon */
+}
+
+.collapse.show {
+    transition: height 0.3s ease; /* Smooth transition for the menu */
+    height: auto; /* Ensure the menu height adjusts to its content */
+}
+
+
+/* Media query for larger screens (e.g., desktops) */
+@media screen and (min-width: 1300px) {
+    .navbarDiv {
+        padding-left: 15vw; /* Adjust padding for larger screens */
+        padding-right: 15vw; /* Adjust padding for larger screens */
+    }
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+    .navbarDiv {
+        padding-left: 12vw; /* Adjust padding for medium screens */
+        padding-right: 12vw; /* Adjust padding for medium screens */
+    }
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .navbarDiv {
+        padding-left: 8vw; /* Adjust padding for smaller screens */
+        padding-right: 8vw; /* Adjust padding for smaller screens */
+    }
+}

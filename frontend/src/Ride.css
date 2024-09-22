@@ -1,0 +1,40 @@
+#rideLink {
+    padding-left: 20px;
+}
+
+#airportLink {
+    font-size:13px;
+}
+/* Approximate the effect of 150% zoom by assuming the viewport width is reduced by 1/1.5 */
+@media (max-width: 800px) { 
+    .zoom-sensitive-image {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #rideLink {
+        padding-left: 50px;
+    }
+    #airportLink {
+        padding-right: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    #rideLink {
+        padding-left: 70px;
+    }
+    #airportLink {
+        padding-right: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #rideLink {
+        padding-left: 100px;
+    }
+    #airportLink {
+        padding-right: 100px;
+    }
+}

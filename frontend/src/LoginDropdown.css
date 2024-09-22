@@ -1,0 +1,46 @@
+.App {
+    text-align: center;
+    position: relative;
+}
+
+.login-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+.dropdown-links {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-links li {
+    margin: 10px 0;
+}
+
+.dropdown-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
